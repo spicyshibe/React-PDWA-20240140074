@@ -28,12 +28,14 @@ export default function App() {
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-center space-y-2"
+              className="text-center space-y-3"
             >
-              <h1 className="text-5xl md:text-7xl font-extralight tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-zinc-100 to-zinc-500">
-                WELCOME TO 
+              <p className="text-xs md:text-sm tracking-[0.4em] text-zinc-500 font-light uppercase">
+                WELCOME TO
+              </p>
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-400">
+                Rafie's Portfolio
               </h1>
-              <p className="text-xs tracking-[0.3em] text-zinc-600 font-medium uppercase">Rafie Rasydan Portfolio</p>
             </motion.div>
           </motion.div>
         )}
@@ -63,14 +65,54 @@ export default function App() {
             Berfokus pada ketertarikan di bidang <span className="text-zinc-200 font-medium">Cybersecurity & Infrastruktur Jaringan</span>. 
             Aktif menjabat sebagai anggota <span className="text-zinc-200 font-medium">KMTI UMY (Periode 2025/2026)</span> pada Divisi Media Propaganda, 
             serta berkontribusi dalam kepanitiaan event <span className="text-zinc-200 font-medium">Phoenix 3x3 UKM Basket UMY</span>. 
-            in my spare time i'd like to... 🤔 <span className="text-zinc-200 font-medium">Make videos and take pics!</span> Checkout my socials!
+            In my spare time i'd like to... 🤔 <span className="text-zinc-200 font-medium">Make videos and take pics!</span> Checkout my socials!
           </p>
 
-          {/* KONTAK & SOSIAL MEDIA */}
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-xs font-medium tracking-widest uppercase text-zinc-500">
-            <a href="https://www.instagram.com/rafierasy?igsh=MTdwMjY3NzdoMXV3eA%3D%3D&utm_source=qr" target="_blank" rel="noreferrer" className="hover:text-zinc-100 transition-colors duration-300">Instagram</a>
-            <a href="https://wa.me/6287788989183" target="_blank" rel="noreferrer" className="hover:text-zinc-100 transition-colors duration-300">WhatsApp</a>
-            <a href="https://t.me/rasyww" target="_blank" rel="noreferrer" className="hover:text-zinc-100 transition-colors duration-300">Telegram</a>
+          {/* KONTAK & SOSIAL MEDIA (MENGGUNAKAN SVG MURNI TANPA IMPORT) */}
+          <div className="flex justify-center items-center gap-8 text-zinc-500">
+            {/* INSTAGRAM */}
+            <a 
+              href="https://www.instagram.com/rafierasy?igsh=MTdwMjY3NzdoMXV3eA%3D%3D&utm_source=qr" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="hover:text-white transition-all duration-300 hover:scale-110"
+              aria-label="Instagram"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            
+            {/* WHATSAPP */}
+            <a 
+              href="https://wa.me/6287788989183" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="hover:text-white transition-all duration-300 hover:scale-110"
+              aria-label="WhatsApp"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+            
+            {/* TELEGRAM */}
+            <a 
+              href="https://t.me/rasyww" 
+              target="_blank" 
+              rel="noreferrer" 
+              className="hover:text-white transition-all duration-300 hover:scale-110"
+              aria-label="Telegram"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </a>
+
+            {/* GITHUB */}
+            <a 
+              href="https://github.com/spicyshibe"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-white transition-all duration-300 hover:scale-110"
+              aria-label="GitHub"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            </a>
           </div>
         </motion.section>
 
@@ -79,7 +121,7 @@ export default function App() {
           <InteractivePhoto />
         </section>
 
-        {/* 4. CERTIFICATES SECTION (SCROLL TRIGGER) */}
+        {/* 4. CERTIFICATES SECTION */}
         <motion.section 
           initial="hidden"
           whileInView="visible"
@@ -97,7 +139,6 @@ export default function App() {
             <p className="text-sm text-zinc-500 font-light">Scroll ke bawah untuk melihat berkas sertifikat aktif. Klik kartu untuk membuka PDF.</p>
           </div>
 
-          {/* GRID KARTU SERTIFIKAT */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <CertificateCard 
               title="UXVidia Arkavidia 10.0" 
@@ -154,10 +195,8 @@ function InteractivePhoto() {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleFlip = () => {
-    if (isFlipped) return; // Mengunci input saat sedang animasi agar tidak bug
+    if (isFlipped) return;
     setIsFlipped(true);
-
-    // Otomatis membalikkan kembali ke foto semula setelah tepat 2 detik (2000ms)
     setTimeout(() => {
       setIsFlipped(false);
     }, 2000);
@@ -175,7 +214,7 @@ function InteractivePhoto() {
         animate={{ rotateY: isFlipped ? 180 : 0 }}
         transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
       >
-        {/* FOTO UTAMA (SISI DEPAN) */}
+        {/* FRONT SIDE */}
         <div 
           className="absolute inset-0 w-full h-full rounded-3xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl transition-all duration-500 group-hover:border-zinc-700"
           style={{ backfaceVisibility: 'hidden' }}
@@ -187,7 +226,7 @@ function InteractivePhoto() {
           />
         </div>
 
-        {/* FOTO KEJUTAN / EASTER EGG (SISI BELAKANG) */}
+        {/* BACK SIDE (EASTER EGG) */}
         <div 
           className="absolute inset-0 w-full h-full rounded-3xl overflow-hidden border border-indigo-500/40 bg-zinc-900 shadow-[0_0_40px_rgba(99,102,241,0.25)]"
           style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
@@ -197,13 +236,12 @@ function InteractivePhoto() {
             alt="Easter Egg Content" 
             className="w-full h-full object-cover"
             onError={(e) => {
-              // Pengaman otomatis jika belum menaruh file foto kedua
               e.target.style.display = 'none';
               e.target.parentNode.innerHTML = `
                 <div class="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-indigo-950 to-zinc-950 p-6 text-center space-y-2">
                   <span class="text-2xl">⚡</span>
                   <p class="text-sm font-semibold text-indigo-400">Easter Egg Mode</p>
-                  <p class="text-xs text-zinc-500 font-light">Masukkan berkas 'foto-easter-egg.jpg' ke folder public untuk mengganti tampilan ini!</p>
+                  <p class="text-xs text-zinc-500 font-light">Berkas gambar rahasiamu aman.</p>
                 </div>
               `;
             }}
