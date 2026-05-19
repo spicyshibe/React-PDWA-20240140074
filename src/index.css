@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 html, body {
   scroll-behavior: smooth;
@@ -8,7 +6,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Kustomisasi scrollbar halus ala macOS/Apple */
+/* Kustomisasi scrollbar minimalis ala macOS/Apple */
 ::-webkit-scrollbar {
   width: 8px;
 }
