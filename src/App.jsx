@@ -52,7 +52,7 @@ export default function App() {
         >
           <div className="space-y-4">
             <span className="text-xs font-semibold tracking-[0.25em] text-indigo-400 uppercase">
-              TI UMY 2024
+              Hi there! I'm
             </span>
             <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-white to-zinc-400">
               Rafie Rasydan W.
@@ -63,7 +63,7 @@ export default function App() {
             Berfokus pada ketertarikan di bidang <span className="text-zinc-200 font-medium">Cybersecurity & Infrastruktur Jaringan</span>. 
             Aktif menjabat sebagai anggota <span className="text-zinc-200 font-medium">KMTI UMY (Periode 2025/2026)</span> pada Divisi Media Propaganda, 
             serta berkontribusi dalam kepanitiaan event <span className="text-zinc-200 font-medium">Phoenix 3x3 UKM Basket UMY</span>. 
-            Memiliki hobi di bidang <span className="text-zinc-200 font-medium">fotografi & videografi</span> dengan beberapa karya video kreatif yang diunggah di Instagram.
+            in my spare time i'd like to... 🤔 <span className="text-zinc-200 font-medium">Make videos and take pics!</span> Checkout my socials!
           </p>
 
           {/* KONTAK & SOSIAL MEDIA */}
