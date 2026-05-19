@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+// HELPER GLOBAL: Otomatis memformat path aset dengan aman untuk lokal & GitHub Pages
+const fixPath = (path) => {
+  if (!path || path === '#') return '#';
+  // Menghilangkan trailing slash dari BASE_URL jika ada, lalu digabung dengan path asli
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+  return `${base}${path}`;
+};
+
 export default function App() {
   const [showWelcome, setShowWelcome] = useState(true);
 
@@ -68,7 +76,7 @@ export default function App() {
             In my spare time i'd like to... 🤔 <span className="text-zinc-200 font-medium">Make videos and take pics!</span> Checkout my socials!
           </p>
 
-          {/* KONTAK & SOSIAL MEDIA (MENGGUNAKAN SVG MURNI TANPA IMPORT) */}
+          {/* KONTAK & SOSIAL MEDIA (SVG MURNI) */}
           <div className="flex justify-center items-center gap-8 text-zinc-500">
             {/* INSTAGRAM */}
             <a 
@@ -220,7 +228,7 @@ function InteractivePhoto() {
           style={{ backfaceVisibility: 'hidden' }}
         >
           <img 
-            src="/16B56116-5AD5-4E5C-9C01-2711183BD5AF.jpg" 
+            src={fixPath("/16B56116-5AD5-4E5C-9C01-2711183BD5AF.jpg")} 
             alt="Rafie Rasydan" 
             className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out"
           />
@@ -232,7 +240,7 @@ function InteractivePhoto() {
           style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
         >
           <img 
-            src="/foto-easter-egg.png"  
+            src={fixPath("/foto-easter-egg.png")}  
             alt="Easter Egg Content" 
             className="w-full h-full object-cover"
             onError={(e) => {
@@ -269,7 +277,7 @@ function CertificateCard({ title, organization, role, year, pdfLink }) {
 
   return (
     <motion.a 
-      href={pdfLink}
+      href={fixPath(pdfLink)}
       target="_blank"
       rel="noreferrer"
       variants={cardVariants}
